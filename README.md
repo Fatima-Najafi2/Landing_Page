@@ -1,2 +1,2 @@
-# Landing_Page
-Landing-Page webpage  the first project of code weekend bootcamp. 
+# Odin-Calculator
+Calculator is the second project of code weekend bootcamp. 
