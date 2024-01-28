@@ -1,11 +1,21 @@
+function getSqrt() {
+  // Get the input value
+  var inputValue = parseFloat(document.getElementsByName('display')[0].value);
+  if (!isNaN(inputValue)) {
+    var result = Math.sqrt(inputValue);
+    document.getElementsByName('display')[0].value = result;
+  } else {
+    document.getElementsByName('display')[0].value = 'Error';
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // Wait for the DOM to be fully loaded
 
-  // Get the display element
+
   var display = document.querySelector('input[name="display"]');
 
   var buttons = document.querySelectorAll('input[type="button"]');
-
 
   buttons.forEach(function (button) {
     button.addEventListener('click', function () {
@@ -20,9 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         break;
       case 'DE':
         display.value = display.value.slice(0, -1);
-        break;
-      case '%':
-        display.value = (parseFloat(display.value) / 100).toString();
         break;
       case '=':
         try {
